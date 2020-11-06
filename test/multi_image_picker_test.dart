@@ -34,6 +34,7 @@ void main() {
           <Matcher>[
             isMethodCall('pickImages', arguments: <String, dynamic>{
               'maxImages': 5,
+              'disablePreview': false,
               'enableCamera': false,
               'iosOptions': CupertinoOptions().toJson(),
               'androidOptions': MaterialOptions().toJson(),
@@ -55,6 +56,7 @@ void main() {
           <Matcher>[
             isMethodCall('pickImages', arguments: <String, dynamic>{
               'maxImages': 5,
+              'disablePreview': false,
               'enableCamera': false,
               'iosOptions': CupertinoOptions().toJson(),
               'androidOptions': MaterialOptions().toJson(),
@@ -82,6 +84,7 @@ void main() {
           <Matcher>[
             isMethodCall('pickImages', arguments: <String, dynamic>{
               'maxImages': 5,
+              'disablePreview': false,
               'enableCamera': false,
               'iosOptions': cupertinoOptions.toJson(),
               'androidOptions': MaterialOptions().toJson(),
@@ -111,6 +114,7 @@ void main() {
           <Matcher>[
             isMethodCall('pickImages', arguments: <String, dynamic>{
               'maxImages': 5,
+              'disablePreview': false,
               'enableCamera': false,
               'androidOptions': materialOptions.toJson(),
               'iosOptions': CupertinoOptions().toJson(),

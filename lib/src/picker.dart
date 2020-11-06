@@ -19,9 +19,12 @@ class MultiImagePicker {
   /// to customize the look of the image picker. On Android
   /// you can pass the [materialOptions] parameter, which should
   /// be an instance of [MaterialOptions] class.
+  /// 
   /// As from version  2.1.40 a new parameter [enableCamera]
   /// was added, which allows the user to take a picture
-  /// directly from the gallery.
+  /// directly from the gallery. (Android only)
+  /// 
+  /// [disablePreview] can be set to true to disable picture preview possibility (iOS only)
   ///
   /// If you would like to present the picker with pre selected
   /// photos, you can pass [selectedAssets] with List of Asset
@@ -36,6 +39,7 @@ class MultiImagePicker {
   static Future<List<Asset>> pickImages({
     @required int maxImages,
     bool enableCamera = false,
+    bool disablePreview = false,
     List<Asset> selectedAssets = const [],
     CupertinoOptions cupertinoOptions = const CupertinoOptions(),
     MaterialOptions materialOptions = const MaterialOptions(),
@@ -52,6 +56,7 @@ class MultiImagePicker {
         <String, dynamic>{
           'maxImages': maxImages,
           'enableCamera': enableCamera,
+          'disablePreview': disablePreview,
           'iosOptions': cupertinoOptions.toJson(),
           'androidOptions': materialOptions.toJson(),
           'selectedAssets': selectedAssets
